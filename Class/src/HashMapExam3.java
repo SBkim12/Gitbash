@@ -17,10 +17,10 @@ public class HashMapExam3 {
 		
 		rList.add(pMap);
 		
-		//pMap = null;//반드시 널값으로 메모리르 지워야한다.(변수의 재사용을 위해서)
+		pMap = null;//반드시 널값으로 메모리르 비워야한다.
 		
-		//pMap = new HashMap<>();
-		
+		pMap = new HashMap<>();
+	
 		pMap.put("name", "홍길동");
 		pMap.put("email", "g.hong@");
 		pMap.put("dept", "경기");
@@ -31,19 +31,22 @@ public class HashMapExam3 {
 		pMap = null;
 		
 		Iterator<Map<String,String>> it = rList.iterator();
+		System.out.println("####### 반복 시작!! ##########");
 		while(it.hasNext()) {
 			Map<String, String> rMap = it.next();
 			
-			System.out.println("####### 반복 시작!! ##########");
+			
 			System.out.println("name : " + rMap.get("name"));
 			System.out.println("email : " + rMap.get("email"));
 			System.out.println("addr : " + rMap.get("addr"));
 			System.out.println("dept : " + rMap.get("dept"));
 		
 			rMap = null;
-			System.out.println("###### 반복 끝!!! ##########");
+			
 			System.out.println();
+			
 		}
+		System.out.println("###### 반복 끝!!! ##########");
 	}
 
 }

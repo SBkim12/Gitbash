@@ -16,9 +16,9 @@ public class HashMapExam2 {
 		
 		rList.add(pMap);
 		
-		//pMap = null;//반드시 널값으로 메모리르 지워야한다.(변수의 재사용을 위해서)
+		pMap = null;//반드시 널값으로 메모리르 지워야한다.
 		
-		//pMap = new HashMap<>();
+		pMap = new HashMap<>();
 		
 		pMap.put("name", "홍길동");
 		pMap.put("email", "g.hong@");
